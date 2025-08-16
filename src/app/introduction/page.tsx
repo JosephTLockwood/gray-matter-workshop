@@ -14,7 +14,7 @@ export default function Introduction() {
 
       <div className="prose prose-lg max-w-none">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          Gray Matter Coding Workshop #1
+          Gray Matter Coding Workshop
         </h1>
 
         <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
@@ -30,7 +30,7 @@ export default function Introduction() {
             <ul className="space-y-4 text-lg">
               <li className="flex items-start">
                 <span className="text-2xl mr-4">🎯</span>
-                <span>To learn FRC's best programming practices</span>
+                <span>To learn FRC&apos;s best programming practices</span>
               </li>
               <li className="flex items-start">
                 <span className="text-2xl mr-4">🏆</span>
@@ -61,38 +61,22 @@ export default function Introduction() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Workshop Overviews</h2>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-lg border">
-              <h3 className="text-xl font-bold text-blue-600 mb-4">Workshop 1</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Introduction - Purpose, Scope, and Prerequisites</li>
-                <li>• Updating Motors and CANivore</li>
-                <li>• Making a Motor Move</li>
-                <li>• Creating a New Project</li>
-                <li>• Project Organization - Directory Layout</li>
-                <li>• Java Functional Interfaces</li>
-                <li>• Command-Based Framework</li>
-                <li>• Project Organization - Naming Conventions</li>
-                <li>• Project Organization - Variable Types</li>
-                <li>• Subsystems</li>
-                <li>• PID and Feedforward Control</li>
-                <li>• Tuning a real mechanism</li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-lg p-6 shadow-lg border">
-              <h3 className="text-xl font-bold text-purple-600 mb-4">Workshop 2</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>• Creating a Swerve Drive Project</li>
-                <li>• Adding PathPlanner</li>
-                <li>• Vision Options</li>
-                <li>• Implementing Vision</li>
-                <li>• Logging Options</li>
-                <li>• Implementing Logging (Level 2)</li>
-                <li>• Multi-Step Commands</li>
-                <li>• Vision-Based Shooting</li>
-              </ul>
-            </div>
+          <div className="bg-white rounded-lg p-6 shadow-lg border max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-blue-600 mb-4">Workshop Topics</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li>• Introduction - Purpose, Scope, and Prerequisites</li>
+              <li>• Updating Motors and CANivore</li>
+              <li>• Making a Motor Move</li>
+              <li>• Creating a New Project</li>
+              <li>• Project Organization - Directory Layout</li>
+              <li>• Java Functional Interfaces</li>
+              <li>• Command-Based Framework</li>
+              <li>• Project Organization - Naming Conventions</li>
+              <li>• Project Organization - Variable Types</li>
+              <li>• Subsystems</li>
+              <li>• PID and Feedforward Control</li>
+              <li>• Tuning a real mechanism</li>
+            </ul>
           </div>
         </section>
 

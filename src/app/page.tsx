@@ -6,10 +6,10 @@ export default function Home() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Gray Matter Coding Workshop #1
+          Gray Matter Coding Workshop
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Learn FRC's best programming practices to build a robot good enough to win events. 
+          Learn FRC&apos;s best programming practices to build a robot good enough to win events. 
           Master code architecture, subsystems, PID tuning, libraries, and more!
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
@@ -70,7 +70,7 @@ export default function Home() {
             This workshop is designed for FRC Teams using Java and CTRE Hardware.
           </p>
           
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">What You'll Learn</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">What You&apos;ll Learn</h3>
           <ul className="space-y-2 text-gray-600">
             <li>• Code architecture and best practices</li>
             <li>• Subsystems structure and organization</li>

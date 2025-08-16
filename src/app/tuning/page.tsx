@@ -16,7 +16,7 @@ export default function Tuning() {
         <div className="bg-blue-50 p-6 rounded-lg mb-6">
           <h3 className="text-lg font-semibold text-blue-900 mb-3">Tuner X Benefits</h3>
           <p className="text-blue-800 mb-3">
-            CTRE's Tuner X allows you to control a motor directly. You can set and change 
+            CTRE&apos;s Tuner X allows you to control a motor directly. You can set and change 
             voltage, PID, FF, and MotionMagic values without deploying code!
           </p>
           <div className="bg-white p-4 rounded border">

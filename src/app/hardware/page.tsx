@@ -18,11 +18,11 @@ export default function Hardware() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Mechanism Overview</h2>
           <div className="bg-white rounded-lg p-8 shadow-lg border">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">What We're Programming</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">What We&apos;re Programming</h3>
             <div className="text-center">
               <div className="bg-blue-50 p-6 rounded-lg inline-block">
                 <p className="text-lg font-medium text-blue-900">ARM Position Control</p>
-                <p className="text-blue-700 mt-2">We'll be programming an arm mechanism to demonstrate motor control and positioning</p>
+                <p className="text-blue-700 mt-2">We&apos;ll be programming an arm mechanism to demonstrate motor control and positioning</p>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Hardware() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Let's Run Some Motors!</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Let&apos;s Run Some Motors!</h2>
           
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 border">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Testing Motor Movement</h3>
@@ -109,7 +109,7 @@ export default function Hardware() {
                 <h4 className="font-semibold text-gray-900 mb-2">⚡ Safety First</h4>
                 <p className="text-sm text-gray-600">
                   Always start with low voltage values when testing motors. 
-                  Make sure your mechanism can move freely and won't cause damage.
+                  Make sure your mechanism can move freely and won&apos;t cause damage.
                 </p>
               </div>
             </div>

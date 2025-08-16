@@ -12,7 +12,7 @@ export default function Programming() {
         <p className="text-gray-600 mb-4">Learn how to program common FRC mechanisms like arms and flywheels.</p>
         
         <div className="bg-green-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-green-900 mb-2">What You'll Learn:</h3>
+          <h3 className="font-semibold text-green-900 mb-2">What You&apos;ll Learn:</h3>
           <ul className="list-disc list-inside text-green-800 space-y-1">
             <li>Setting up subsystems for ARM and Flywheel</li>
             <li>Creating motor and sensor configurations</li>

@@ -56,7 +56,7 @@ export default function Prerequisites() {
                   </a>
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  Use Git for version control. Summarize changes clearly (e.g., 'Add drivetrain PID tuning logic').
+                  Use Git for version control. Summarize changes clearly (e.g., &apos;Add drivetrain PID tuning logic&apos;).
                 </p>
               </div>
 

@@ -13,7 +13,7 @@ export default function CommandFramework() {
           <p className="text-gray-600 mb-3">Use BooleanSuppliers (True or False)</p>
           <p className="text-sm text-gray-500">
             Link inputs to commands (e.g., press button to drive forward, or use sensor to run Command automatically).
-            All buttons/triggers on a game controller are considered "Triggers".
+            All buttons/triggers on a game controller are considered &quot;Triggers&quot;.
           </p>
         </div>
         
