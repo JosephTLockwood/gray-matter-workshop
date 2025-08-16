@@ -53,11 +53,48 @@ src/
     └── PageTemplate.tsx   # Shared page layout
 ```
 
+## 🤖 GitHub Actions CI/CD
+
+This project includes automated workflows for quality assurance and deployment:
+
+### CI Pipeline
+
+The GitHub Actions workflow (`.github/workflows/ci.yml`) automatically:
+
+- ✅ **Lints code** with ESLint for style consistency
+- 🔍 **Type checks** with TypeScript for type safety  
+- 🏗️ **Builds project** to ensure compilation success
+- 📦 **Uploads artifacts** for deployment verification
+
+### Workflow Triggers
+
+- **Push to main/master** - Full CI pipeline + deployment readiness check
+- **Pull Requests** - CI pipeline for code quality verification
+- **Manual trigger** - Can be run manually from GitHub Actions tab
+
+### Status Badges
+
+Add these to your forked repository:
+
+```markdown
+![CI/CD Pipeline](https://github.com/yourusername/gray-matter-workshop/workflows/CI/CD%20Pipeline/badge.svg)
+```
+
 ## 🌐 Deploy on Vercel
 
-### Quick Deploy
+### Automatic Deployment (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/gray-matter-workshop)
+1. **Fork this repository** to your GitHub account
+2. **Connect to Vercel:**
+   - Visit [vercel.com](https://vercel.com)
+   - Sign in with GitHub
+   - Import your forked repository
+   - Deploy automatically
+
+3. **Automatic Updates:**
+   - Every push to `main` triggers a new deployment
+   - Pull requests create preview deployments
+   - GitHub Actions ensure code quality before deployment
 
 ### Manual Deployment
 
