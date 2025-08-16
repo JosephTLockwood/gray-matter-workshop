@@ -1,6 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gray Matter Coding Workshop #1 Website
 
-## Getting Started
+A responsive website built with Next.js and Tailwind CSS that converts the Gray Matter Coding Workshop #1 Canva presentation into an accessible markdown-based learning platform.
+
+## 🎯 About
+
+This website transforms the FRC programming workshop content into an interactive web experience, covering:
+
+- **Introduction & Prerequisites** - Getting started with FRC programming
+- **Hardware Setup** - CTRE motors, CANivore, and device configuration  
+- **Project Setup** - Creating and organizing WPILib projects
+- **Command Framework** - Understanding triggers, subsystems, and commands
+- **Programming** - ARM and Flywheel mechanism implementation
+- **Control Systems** - PID and Feedforward control theory
+- **Tuning** - Real-world mechanism tuning with Phoenix Tuner X
+
+## 🚀 Getting Started
 
 First, run the development server:
 
@@ -10,27 +24,94 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** Next.js 15 with App Router
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Deployment:** Vercel
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── introduction/       # Workshop introduction
+│   ├── prerequisites/      # Required software & hardware
+│   ├── hardware/          # Hardware setup guide
+│   ├── project-setup/     # Project creation & organization
+│   ├── command-framework/ # Command-based programming
+│   ├── programming/       # ARM & Flywheel implementation
+│   ├── control-systems/   # PID & Feedforward theory
+│   └── tuning/           # Mechanism tuning guide
+└── components/            # Reusable React components
+    ├── Navigation.tsx     # Main navigation component
+    └── PageTemplate.tsx   # Shared page layout
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy on Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Quick Deploy
 
-## Deploy on Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/gray-matter-workshop)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Manual Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project directory
+3. Follow the prompts to deploy
+
+### Environment Setup
+
+No environment variables required for basic deployment.
+
+## 📝 Content Management
+
+The workshop content is organized into themed pages that can be easily extended:
+
+- Each section has its own route under `/src/app/`
+- Content is written in JSX with Tailwind styling
+- Navigation is automatically generated from the route structure
+- Links between sections provide a guided learning experience
+
+## 🎨 Design Features
+
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Clean Typography** - Easy-to-read content with proper hierarchy
+- **Interactive Navigation** - Smooth transitions between sections
+- **Progress Tracking** - Clear next/previous navigation
+- **Code-Friendly** - Optimized for technical content display
+
+## 🔧 Customization
+
+To add new sections:
+
+1. Create a new directory in `src/app/`
+2. Add a `page.tsx` file with your content
+3. Update the navigation in `src/components/Navigation.tsx`
+4. Link from previous/next pages as needed
+
+## 📱 Mobile Optimization
+
+The site includes:
+- Responsive navigation menu
+- Touch-friendly buttons and links
+- Optimized font sizes for mobile reading
+- Fast loading times
+
+## 🤝 Contributing
+
+This project was generated from Canva presentation content. To extend or modify:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+Educational content based on Gray Matter Coding Workshop materials.
