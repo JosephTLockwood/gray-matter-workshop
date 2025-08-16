@@ -1,4 +1,6 @@
 import Link from "next/link";
+import CodeBlock from "@/components/CodeBlock";
+import ImageBlock from "@/components/ImageBlock";
 
 export default function Hardware() {
   return (
@@ -14,6 +16,73 @@ export default function Hardware() {
 
       <div className="prose prose-lg max-w-none">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Hardware Setup</h1>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Hardware Components</h2>
+          
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            <div className="bg-white rounded-lg p-6 shadow-lg border">
+              <ImageBlock
+                src="/images/hardware/Kracken60x.png"
+                alt="Kraken Motor"
+                width={250}
+                height={200}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Kraken Motor</h3>
+              <p className="text-gray-600 mb-3">
+                CTRE Motor. Comes with a built-in motor controller called TalonFX.
+              </p>
+              <div className="bg-blue-50 p-3 rounded-lg">
+                <p className="text-sm text-blue-800">
+                  <strong>Key Features:</strong> High torque, integrated controller, CAN communication, 
+                  advanced control modes including PID and Motion Magic.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 shadow-lg border">
+              <ImageBlock
+                src="/images/hardware/Encoder.png"
+                alt="CANCoder"
+                width={250}
+                height={200}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">CANCoder</h3>
+              <p className="text-gray-600 mb-3">
+                Absolute encoder. Gets the angle of a mechanism. Useful in things like swerve modules and arms.
+              </p>
+              <div className="bg-green-50 p-3 rounded-lg">
+                <p className="text-sm text-green-800">
+                  <strong>Key Features:</strong> 360° absolute position, magnetic sensing, 
+                  no calibration needed on startup, CAN bus communication.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 shadow-lg border">
+              <ImageBlock
+                src="/images/hardware/CANivore.png"
+                alt="CANivore"
+                width={250}
+                height={200}
+                className="mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">CANivore</h3>
+              <p className="text-gray-600 mb-3">
+                Adds a new CAN network that allows motors to be updated more frequently and communicate faster. 
+                Also enables you to control motors without a roboRIO.
+              </p>
+              <div className="bg-purple-50 p-3 rounded-lg">
+                <p className="text-sm text-purple-800">
+                  <strong>Key Features:</strong> 1000Hz update rate, reduced roboRIO load, 
+                  standalone motor control, improved real-time performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Mechanism Overview</h2>
@@ -91,7 +160,7 @@ export default function Hardware() {
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8 border">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Testing Motor Movement</h3>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <h4 className="font-semibold text-gray-900 mb-3">Quick Test Steps:</h4>
                 <ol className="list-decimal list-inside space-y-2 text-gray-700">
@@ -110,6 +179,40 @@ export default function Hardware() {
                 <p className="text-sm text-gray-600">
                   Always start with low voltage values when testing motors. 
                   Make sure your mechanism can move freely and won&apos;t cause damage.
+                </p>
+              </div>
+            </div>
+
+            {/* Example: How to add Canva images and code */}
+            <div className="bg-white p-6 rounded-lg border">
+              <h4 className="font-semibold text-gray-900 mb-4">🔧 Example: Adding Your Canva Content</h4>
+              
+              <p className="text-gray-600 mb-4">
+                Here&apos;s how you&apos;ll add images and code from your presentation:
+              </p>
+
+              <CodeBlock
+                title="Motor Configuration Example"
+                filename="Robot.java"
+                language="java"
+                code={`// Example: Basic motor setup from your Canva slides
+TalonFX motor = new TalonFX(1, "CANivore");
+TalonFXConfiguration config = new TalonFXConfiguration();
+
+// Apply factory defaults
+motor.getConfigurator().apply(config);
+
+// Set control mode
+motor.setControl(new VoltageOut(2.0)); // 2V output`}
+              />
+
+              <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <p className="text-blue-800 text-sm">
+                  <strong>📋 To add your content:</strong><br/>
+                  1. Export slides as PNG from Canva<br/>
+                  2. Save to <code>/public/images/</code><br/>
+                  3. Use <code>&lt;ImageBlock src=&quot;/images/your-image.png&quot; alt=&quot;Description&quot; /&gt;</code><br/>
+                  4. Use <code>&lt;CodeBlock&gt;</code> for code snippets
                 </p>
               </div>
             </div>
