@@ -20,25 +20,25 @@ export default function PageTemplate({ title, previousPage, nextPage, children }
     <div className="max-w-4xl mx-auto px-4 py-12">
       {previousPage && (
         <div className="mb-8">
-          <Link 
+          <Link
             href={previousPage.href}
-            className="text-blue-600 hover:text-blue-800 font-medium"
+            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
           >
             ← Back to {previousPage.title}
           </Link>
         </div>
       )}
 
-      <div className="prose prose-lg max-w-none">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">{title}</h1>
+      <div className="prose prose-lg max-w-none dark:prose-invert">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">{title}</h1>
         
         {children}
 
-        <div className="flex justify-between items-center pt-8 border-t">
+        <div className="flex justify-between items-center pt-8 border-t border-gray-200 dark:border-gray-700">
           {previousPage ? (
-            <Link 
+            <Link
               href={previousPage.href}
-              className="text-gray-600 hover:text-gray-800 font-medium"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white font-medium"
             >
               ← Previous: {previousPage.title}
             </Link>

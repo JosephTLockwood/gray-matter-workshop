@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 /**
@@ -113,7 +113,30 @@ const workshop1Items = [
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true); // Default open on desktop
   const [isWorkshop1Open, setIsWorkshop1Open] = useState(true); // Workshop 1 sections open by default
+  const [isDark, setIsDark] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = storedTheme === 'dark' || (!storedTheme && prefersDark);
+    if (dark) {
+      document.documentElement.classList.add('dark');
+      setIsDark(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setIsDark(true);
+    }
+  };
 
   return (
     <>
@@ -128,12 +151,12 @@ export default function Sidebar() {
       {/* Sidebar toggle button - always visible */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed top-4 z-50 p-2 bg-white rounded-md shadow-lg border hover:bg-gray-50 transition-all duration-300 ${
+        className={`fixed top-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-md shadow-lg border dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 ${
           isOpen ? 'left-60' : 'left-4'
         }`}
         title={isOpen ? 'Close sidebar' : 'Open sidebar'}
       >
-        <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 text-gray-600 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           {isOpen ? (
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
           ) : (
@@ -144,18 +167,18 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed md:relative top-0 left-0 h-full bg-white shadow-lg border-r z-40 transform transition-all duration-300 ease-in-out ${
-          isOpen 
-            ? 'translate-x-0 w-64' 
+        className={`fixed md:relative top-0 left-0 h-full bg-white dark:bg-gray-800 shadow-lg border-r border-gray-200 dark:border-gray-700 z-40 transform transition-all duration-300 ease-in-out ${
+          isOpen
+            ? 'translate-x-0 w-64'
             : '-translate-x-full md:translate-x-0 md:w-16'
         }`}
       >
-        <div className={`p-4 ${isOpen ? 'px-6' : 'px-2'}`}>
+        <div className={`flex flex-col h-full p-4 ${isOpen ? 'px-6' : 'px-2'}`}>
           {/* Logo/Title */}
           <div className="mb-8 flex items-center justify-center">
             <Link 
               href="/" 
-              className={`font-bold text-gray-800 transition-all duration-300 ${
+              className={`font-bold text-gray-800 dark:text-gray-100 transition-all duration-300 ${
                 isOpen ? 'text-xl' : 'text-sm'
               }`}
               title="Gray Matter Workshop"
@@ -171,7 +194,7 @@ export default function Sidebar() {
           </div>
           
           {/* Navigation */}
-          <nav className="space-y-2">
+          <nav className="space-y-2 flex-1">
             {/* Main Navigation Items */}
             {navigationItems.map((item) => {
               const isActive = pathname === item.href;
@@ -183,8 +206,8 @@ export default function Sidebar() {
                       isOpen ? 'px-4 py-3 space-x-3' : 'px-3 py-3 justify-center'
                     } ${
                       isActive
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                        ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700'
                     }`}
                     onClick={() => {
                       // Only close on mobile
@@ -200,10 +223,10 @@ export default function Sidebar() {
                       <span className="truncate">{item.label}</span>
                     )}
                   </Link>
-                  
+
                   {/* Tooltip for collapsed state */}
                   {!isOpen && (
-                    <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                    <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900 text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                       {item.label}
                     </div>
                   )}
@@ -214,10 +237,10 @@ export default function Sidebar() {
             {/* Workshop #1 Section */}
             {isOpen && (
               <div className="pt-4">
-                <div className="border-t border-gray-200 pt-4">
+                <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
                   <button
                     onClick={() => setIsWorkshop1Open(!isWorkshop1Open)}
-                    className="flex items-center justify-between w-full px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors"
+                    className="flex items-center justify-between w-full px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors"
                   >
                     <div className="flex items-center space-x-2">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,8 +268,8 @@ export default function Sidebar() {
                           href={item.href}
                           className={`flex items-center rounded-md text-sm font-medium transition-all duration-300 pl-8 pr-4 py-2 space-x-3 ${
                             isActive
-                              ? 'bg-blue-100 text-blue-700'
-                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                              ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700'
                           }`}
                           onClick={() => {
                             // Only close on mobile
@@ -270,19 +293,43 @@ export default function Sidebar() {
             {/* Workshop #1 collapsed view */}
             {!isOpen && (
               <div className="relative group">
-                <div className="flex items-center justify-center px-3 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors">
+                <div className="flex items-center justify-center px-3 py-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md transition-colors">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
-                
+
                 {/* Tooltip for collapsed workshop */}
-                <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900 text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
                   Workshop #1
                 </div>
               </div>
             )}
           </nav>
+          <div className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="relative group flex justify-center">
+              <button
+                onClick={toggleTheme}
+                className="flex items-center space-x-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+              >
+                {isDark ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.02 6.36l-.7-.7M6.72 6.72l-.7-.7m12.02 0l-.7.7M6.72 17.28l-.7.7M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                  </svg>
+                )}
+                {isOpen && <span>{isDark ? 'Light Mode' : 'Dark Mode'}</span>}
+              </button>
+              {!isOpen && (
+                <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white dark:bg-gray-200 dark:text-gray-900 text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                  {isDark ? 'Light Mode' : 'Dark Mode'}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </>
