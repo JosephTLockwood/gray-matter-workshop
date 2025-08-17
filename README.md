@@ -49,8 +49,12 @@ src/
 │   ├── control-systems/   # PID & Feedforward theory
 │   └── tuning/           # Mechanism tuning guide
 └── components/            # Reusable React components
-    ├── Navigation.tsx     # Main navigation component
-    └── PageTemplate.tsx   # Shared page layout
+    ├── Sidebar.tsx        # Collapsible navigation sidebar
+    ├── PageTemplate.tsx   # Shared page layout  
+    ├── CodeBlock.tsx      # IDE-style syntax highlighted code
+    ├── GitHubPR.tsx       # Live GitHub pull request display
+    ├── GitHubPage.tsx     # Live GitHub file display
+    └── ImageBlock.tsx     # Optimized image display
 ```
 
 ## 🤖 GitHub Actions CI/CD
@@ -129,7 +133,7 @@ To add new sections:
 
 1. Create a new directory in `src/app/`
 2. Add a `page.tsx` file with your content
-3. Update the navigation in `src/components/Navigation.tsx`
+3. Update the navigation in `src/components/Sidebar.tsx`
 4. Link from previous/next pages as needed
 
 ## 📱 Mobile Optimization

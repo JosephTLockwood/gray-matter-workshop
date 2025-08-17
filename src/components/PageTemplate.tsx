@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+/**
+ * Consistent page layout template for workshop content
+ * Features:
+ * - Standardized spacing and typography
+ * - Previous/Next navigation
+ * - Responsive design
+ * - Content structure consistency across all workshop pages
+ */
 interface PageTemplateProps {
   title: string;
   previousPage?: { href: string; title: string };

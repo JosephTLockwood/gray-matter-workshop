@@ -55,9 +55,12 @@ src/
 │   ├── layout.tsx         # Root layout with sidebar
 │   └── page.tsx           # Home page
 └── components/            # Reusable React components
-    ├── Navigation.tsx     # Top navigation (unused)
+    ├── Sidebar.tsx        # Collapsible navigation sidebar
     ├── PageTemplate.tsx   # Shared page layout
-    └── Sidebar.tsx        # Main navigation sidebar
+    ├── CodeBlock.tsx      # IDE-style syntax highlighted code
+    ├── GitHubPR.tsx       # Live GitHub pull request display
+    ├── GitHubPage.tsx     # Live GitHub file display
+    └── ImageBlock.tsx     # Optimized image display
 ```
 
 ### Adding New Content

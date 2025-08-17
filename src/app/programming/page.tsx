@@ -1,6 +1,5 @@
 import PageTemplate from "@/components/PageTemplate";
-import CodeBlock from "@/components/CodeBlock";
-import ImageBlock from "@/components/ImageBlock";
+import GitHubPage from "@/components/GitHubPage";
 
 export default function Programming() {
   return (
@@ -77,55 +76,12 @@ export default function Programming() {
           </p>
         </div>
 
-        <CodeBlock
+        <GitHubPage
+          repository="Hemlock5712/2025-Workshop"
+          filePath="src/main/java/frc/robot/subsystems/Arm.java"
+          branch="3372fcaad9eb76922688eb5383efc9a650affd10"
           title="Initial ARM Subsystem Implementation"
-          filename="Arm.java"
-          language="java"
-          code={`package frc.robot.subsystems;
-
-import com.ctre.phoenix6.configs.TalonFXConfiguration;
-import com.ctre.phoenix6.controls.VoltageOut;
-import com.ctre.phoenix6.hardware.CANcoder;
-import com.ctre.phoenix6.hardware.TalonFX;
-import com.ctre.phoenix6.signals.NeutralModeValue;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
-public class Arm extends SubsystemBase {
-    /** Creates a new Arm. */
-    // Create the leader TalonFX motor and a CANcoder for position feedback
-    private final TalonFX leader = new TalonFX(20);
-    private final CANcoder encoder = new CANcoder(21);
-    // Voltage output control for the arm
-    private final VoltageOut voltageOut = new VoltageOut(0);
-
-    public Arm() {
-        // Create and apply the configuration for the leader motor
-        TalonFXConfiguration config = new TalonFXConfiguration();
-        config.MotorOutput.NeutralMode = NeutralModeValue.Brake;
-        // Configure the leader motor to use the CANcoder for position feedback
-        config.Feedback.withRemoteCANcoder(encoder);
-        leader.getConfigurator().apply(config);
-    }
-
-    @Override
-    public void periodic() {
-        // This method will be called once per scheduler run
-    }
-
-    /**
-     * Sets the voltage for the arm.
-     *
-     * @param voltage The voltage to set.
-     */
-    public void setVoltage(double voltage) {
-        // Apply the voltage output to the leader motor
-        leader.setControl(voltageOut.withOutput(voltage));
-    }
-
-    public void stop() {
-        leader.stopMotor();
-    }
-}`}
+          description="This is our starting point for the workshop. We'll progressively enhance this code throughout the learning process."
         />
 
         <div className="mt-6 grid md:grid-cols-2 gap-6">

@@ -1,5 +1,14 @@
 import Image from 'next/image';
 
+/**
+ * Optimized image display component for workshop content
+ * Features:
+ * - Next.js Image optimization with lazy loading
+ * - Consistent styling and responsive behavior
+ * - Optional titles and captions for educational context
+ * - Configurable dimensions and priority loading
+ * - Professional presentation for hardware/technical images
+ */
 interface ImageBlockProps {
   src: string;
   alt: string;

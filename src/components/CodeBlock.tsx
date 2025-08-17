@@ -4,6 +4,16 @@ import { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+/**
+ * Professional IDE-style code block component
+ * Features:
+ * - VS Code Dark+ theme for syntax highlighting
+ * - macOS-style window controls (optional)
+ * - Copy to clipboard functionality
+ * - Line numbers
+ * - Language badge
+ * - Optimized for educational content
+ */
 interface CodeBlockProps {
   code: string;
   title?: string;
@@ -11,6 +21,7 @@ interface CodeBlockProps {
   language?: string;
   className?: string;
   showLineNumbers?: boolean;
+  hideControls?: boolean;
 }
 
 export default function CodeBlock({ 
@@ -19,7 +30,8 @@ export default function CodeBlock({
   filename, 
   language = 'java',
   className = '',
-  showLineNumbers = true
+  showLineNumbers = true,
+  hideControls = false
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 
@@ -56,7 +68,7 @@ export default function CodeBlock({
       {(title || filename) && (
         <div className="bg-[#2d2d30] px-4 py-3 border-b border-gray-600 flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            {filename && (
+            {filename && !hideControls && (
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>

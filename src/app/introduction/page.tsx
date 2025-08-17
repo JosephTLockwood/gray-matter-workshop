@@ -59,24 +59,127 @@ export default function Introduction() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Workshop Overviews</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Choose Your Workshop</h2>
           
-          <div className="bg-white rounded-lg p-6 shadow-lg border max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-blue-600 mb-4">Workshop Topics</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>• Introduction - Purpose, Scope, and Prerequisites</li>
-              <li>• Updating Motors and CANivore</li>
-              <li>• Making a Motor Move</li>
-              <li>• Creating a New Project</li>
-              <li>• Project Organization - Directory Layout</li>
-              <li>• Java Functional Interfaces</li>
-              <li>• Command-Based Framework</li>
-              <li>• Project Organization - Naming Conventions</li>
-              <li>• Project Organization - Variable Types</li>
-              <li>• Subsystems</li>
-              <li>• PID and Feedforward Control</li>
-              <li>• Tuning a real mechanism</li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Workshop #1 */}
+            <div className="bg-white rounded-lg p-8 shadow-lg border hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl mr-4">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Workshop #1</h3>
+              </div>
+              
+              <p className="text-gray-600 mb-6">
+                Fundamentals of FRC programming with command-based framework, subsystems, and PID control.
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                <Link 
+                  href="/hardware"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Hardware Setup</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+                
+                <Link 
+                  href="/project-setup"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Project Setup</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+                
+                <Link 
+                  href="/command-framework"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Command Framework</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+                
+                <Link 
+                  href="/programming"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Programming</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+                
+                <Link 
+                  href="/control-systems"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Control Systems</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+                
+                <Link 
+                  href="/tuning"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-gray-700 group-hover:text-blue-700">Tuning</span>
+                    <span className="text-gray-400 group-hover:text-blue-500">→</span>
+                  </div>
+                </Link>
+              </div>
+              
+              <Link 
+                href="/hardware"
+                className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+              >
+                Start Workshop #1
+              </Link>
+            </div>
+
+            {/* Workshop #2 */}
+            <div className="bg-white rounded-lg p-8 shadow-lg border opacity-60">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gray-400 rounded-lg flex items-center justify-center text-white font-bold text-xl mr-4">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Workshop #2</h3>
+              </div>
+              
+              <p className="text-gray-600 mb-6">
+                Advanced topics including vision, autonomous, path planning, and competition strategy.
+              </p>
+              
+              <div className="space-y-3 mb-6">
+                <div className="p-3 bg-gray-100 rounded-lg">
+                  <span className="font-medium text-gray-500">Vision & AprilTags</span>
+                </div>
+                <div className="p-3 bg-gray-100 rounded-lg">
+                  <span className="font-medium text-gray-500">Autonomous Programming</span>
+                </div>
+                <div className="p-3 bg-gray-100 rounded-lg">
+                  <span className="font-medium text-gray-500">Path Planning</span>
+                </div>
+                <div className="p-3 bg-gray-100 rounded-lg">
+                  <span className="font-medium text-gray-500">Competition Strategy</span>
+                </div>
+              </div>
+              
+              <button 
+                disabled
+                className="w-full bg-gray-400 text-white py-3 px-4 rounded-lg font-semibold cursor-not-allowed text-center block"
+              >
+                Coming Soon
+              </button>
+            </div>
           </div>
         </section>
 

@@ -1,6 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import PageTemplate from "@/components/PageTemplate";
+import GitHubPR from "@/components/GitHubPR";
+import GitHubPage from "@/components/GitHubPage";
 
 export default function Tuning() {
+  const [activeTab, setActiveTab] = useState<'ide' | 'diff'>('ide');
   return (
     <PageTemplate 
       title="Tuning Real Mechanisms"
@@ -39,11 +45,68 @@ export default function Tuning() {
         </div>
       </div>
       
-      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-        <p className="text-yellow-800">
-          📋 <strong>Content Coming Soon:</strong> Step-by-step tuning procedures for ARM and Flywheel mechanisms.
-        </p>
-      </div>
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Code Evolution: From Basic to Advanced</h2>
+        
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-8">
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">🎯 Workshop Journey Complete</h3>
+          <p className="text-gray-700">
+            Explore the final ARM implementation and see exactly how we transformed basic voltage control 
+            into sophisticated position control with PID, feedforward, and Motion Magic.
+          </p>
+        </div>
+
+        {/* External Tabbed Interface */}
+        <div className="bg-white rounded-lg border shadow-sm">
+          <div className="border-b border-gray-200">
+            <div className="flex">
+              <button
+                onClick={() => setActiveTab('ide')}
+                className={`px-6 py-3 text-sm font-medium border-b-2 ${
+                  activeTab === 'ide'
+                    ? 'border-blue-600 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                💻 Final Implementation
+              </button>
+              <button
+                onClick={() => setActiveTab('diff')}
+                className={`px-6 py-3 text-sm font-medium border-b-2 ${
+                  activeTab === 'diff'
+                    ? 'border-blue-600 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                🔄 GitHub Changes
+              </button>
+            </div>
+          </div>
+
+          {/* Tab Content */}
+          <div className="p-0">
+            {activeTab === 'ide' ? (
+              <div>
+                <GitHubPage
+                  repository="Hemlock5712/2025-Workshop"
+                  filePath="src/main/java/frc/robot/subsystems/Arm.java"
+                  branch="5-SubsystemAdditions"
+                  className="m-0"
+                />
+              </div>
+            ) : (
+              <div>
+                <GitHubPR
+                  repository="Hemlock5712/2025-Workshop"
+                  pullRequestNumber={1}
+                  focusFile="Arm.java"
+                  className="m-0"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
     </PageTemplate>
   );
 }
