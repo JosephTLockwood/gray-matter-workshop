@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 /**
  * GitHub API response types for pull request data
@@ -99,7 +100,7 @@ export default function GitHubPR({
     };
 
     fetchPRData();
-  }, [repository, pullRequestNumber]);
+  }, [repository, pullRequestNumber, focusFile]);
 
   if (loading) {
     return (
@@ -239,9 +240,11 @@ export default function GitHubPR({
               
               <div className="flex items-center space-x-4 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
-                  <img 
+                  <Image 
                     src={pr.user.avatar_url} 
                     alt={pr.user.login}
+                    width={24}
+                    height={24}
                     className="w-6 h-6 rounded-full"
                   />
                   <span>{pr.user.login}</span>
@@ -325,7 +328,7 @@ export default function GitHubPR({
         <p className="text-gray-700 text-sm">
           This pull request demonstrates real-world development practices. Students can explore the actual 
           code changes, commit history, and review comments that led to the implementation improvements.
-          Click "View on GitHub" to see the full development discussion and review process.
+          Click &quot;View on GitHub&quot; to see the full development discussion and review process.
         </p>
       </div>
     </div>

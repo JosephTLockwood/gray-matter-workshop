@@ -33,7 +33,10 @@ export default function GitHubPage({
   const [fileContent, setFileContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [fileInfo, setFileInfo] = useState<any>(null);
+  const [fileInfo, setFileInfo] = useState<{
+    size?: number;
+    content: string;
+  } | null>(null);
 
   useEffect(() => {
     const fetchFileData = async () => {
@@ -113,15 +116,6 @@ export default function GitHubPage({
     return `${(size / (1024 * 1024)).toFixed(1)} MB`;
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
 
   const filename = filePath.split('/').pop() || filePath;
   const language = getLanguageFromExtension(filename);
@@ -182,7 +176,7 @@ export default function GitHubPage({
       <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
         <h5 className="font-semibold text-gray-900 mb-3">📁 Live from GitHub</h5>
         <p className="text-gray-700 text-sm">
-          This file is displayed directly from the GitHub repository. Click "View on GitHub" to see 
+          This file is displayed directly from the GitHub repository. Click &quot;View on GitHub&quot; to see 
           the file in its repository context, view history, blame information, and make edits.
         </p>
       </div>
