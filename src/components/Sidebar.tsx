@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -272,17 +273,21 @@ export default function Sidebar() {
             >
               {isOpen ? (
                 <>
-                  <img
+                  <Image
                     src="/images/gray-matter-logo.jpg"
                     alt="Gray Matter Logo"
+                    width={40}
+                    height={40}
                     className="w-10 h-10 rounded-lg"
                   />
                   <span>Gray Matter Workshop</span>
                 </>
               ) : (
-                <img
+                <Image
                   src="/images/gray-matter-logo.jpg"
                   alt="Gray Matter Logo"
+                  width={32}
+                  height={32}
                   className="w-8 h-8 rounded-lg"
                 />
               )}

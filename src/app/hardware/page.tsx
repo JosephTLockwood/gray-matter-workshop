@@ -104,18 +104,30 @@ export default function Hardware() {
             Mechanism Overview
           </h2>
           <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
               What We&apos;re Programming
             </h3>
-            <div className="text-center">
-              <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-lg inline-block">
-                <p className="text-lg font-medium text-blue-900 dark:text-blue-300">
-                  ARM Position Control
-                </p>
-                <p className="text-blue-700 dark:text-blue-300 mt-2">
-                  We&apos;ll be programming an arm mechanism to demonstrate
-                  motor control and positioning
-                </p>
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1">
+                <ImageBlock
+                  src="/images/mechanisms/arm.jpg"
+                  alt="Robot Arm Mechanism"
+                  width={400}
+                  height={300}
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-lg">
+                  <p className="text-xl font-medium text-blue-900 dark:text-blue-300 mb-3">
+                    ARM Position Control
+                  </p>
+                  <p className="text-blue-700 dark:text-blue-300">
+                    We&apos;ll be programming an arm mechanism to demonstrate
+                    motor control and positioning. Learn PID tuning, encoder feedback, 
+                    and motion profiling for precise positioning control.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -156,46 +168,47 @@ export default function Hardware() {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            
+            {/* Phoenix Software Resources - moved inside CTRE advantages */}
+            <div className="mt-8">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                 🔧 Phoenix Software Resources
-              </h3>
-              <div className="space-y-3">
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-intro.html"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → CANivore Introduction
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → Phoenix 6 Documentation
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → Phoenix 6 API Reference
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → Phoenix Tuner X Documentation
-                </a>
+              </h4>
+              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-800">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <a
+                    href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-intro.html"
+                    className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    → CANivore Introduction
+                  </a>
+                  <a
+                    href="https://v6.docs.ctr-electronics.com/"
+                    className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    → Phoenix 6 Documentation
+                  </a>
+                  <a
+                    href="https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/"
+                    className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    → Phoenix 6 API Reference
+                  </a>
+                  <a
+                    href="https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/"
+                    className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    → Phoenix Tuner X Documentation
+                  </a>
+                </div>
               </div>
             </div>
           </div>
