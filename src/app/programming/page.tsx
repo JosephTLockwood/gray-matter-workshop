@@ -81,7 +81,7 @@ export default function Programming() {
           filePath="src/main/java/frc/robot/subsystems/Arm.java"
           branch="3372fcaad9eb76922688eb5383efc9a650affd10"
           title="Initial ARM Subsystem Implementation"
-          description="This is our starting point for the workshop. We'll progressively enhance this code throughout the learning process."
+          description="This is our starting point for the workshop. We&apos;ll progressively enhance this code throughout the learning process."
         />
 
         <div className="mt-6 grid md:grid-cols-2 gap-6">

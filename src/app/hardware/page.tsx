@@ -129,13 +129,13 @@ export default function Hardware() {
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800 mb-8">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-              🎯 CTRE's Unique Advantages
+              🎯 CTRE&apos;s Unique Advantages
             </h3>
             <div className="grid md:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Full PID Control</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Complete PID implementation with kP, kI, kD, and advanced filtering options that other vendors don't provide.
+                  Complete PID implementation with kP, kI, kD, and advanced filtering options that other vendors don&apos;t provide.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
@@ -159,7 +159,7 @@ export default function Hardware() {
             </div>
             <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-950/30 rounded-lg border border-yellow-200 dark:border-yellow-900">
               <p className="text-yellow-800 dark:text-yellow-300 font-medium">
-                💡 <strong>The Bottom Line:</strong> CTRE offers complete motor control features (PID + FF + Motion Profiling) that other vendors simply don't provide, making it the clear choice for competitive robotics.
+                💡 <strong>The Bottom Line:</strong> CTRE offers complete motor control features (PID + FF + Motion Profiling) that other vendors simply don&apos;t provide, making it the clear choice for competitive robotics.
               </p>
             </div>
           </div>
