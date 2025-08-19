@@ -1,5 +1,4 @@
 import Link from "next/link";
-import CodeBlock from "@/components/CodeBlock";
 import ImageBlock from "@/components/ImageBlock";
 
 export default function Hardware() {
@@ -44,7 +43,7 @@ export default function Hardware() {
                 <p className="text-sm text-blue-800 dark:text-blue-300">
                   <strong>Key Features:</strong> High torque, integrated
                   controller, CAN communication, advanced control modes
-                  including PID and Motion Magic.
+                  including PID, FeedForward, and Motion Magic.
                 </p>
               </div>
             </div>
@@ -128,24 +127,9 @@ export default function Hardware() {
           </h2>
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800 mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
               🎯 CTRE&apos;s Unique Advantages
             </h3>
-            
-            {/* CTRE Comparison Image */}
-            <div className="mb-8 text-center">
-              <ImageBlock
-                src="/images/ctre/ctre advantage.png"
-                alt="CTRE vs Other Vendors Comparison"
-                width={800}
-                height={400}
-                className="rounded-lg shadow-lg mx-auto"
-              />
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-                CTRE provides comprehensive motor control features that competitors lack
-              </p>
-            </div>
-
             <div className="grid md:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Full PID Control</h4>
@@ -172,17 +156,12 @@ export default function Hardware() {
                 </p>
               </div>
             </div>
-            <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-950/30 rounded-lg border border-yellow-200 dark:border-yellow-900">
-              <p className="text-yellow-800 dark:text-yellow-300 font-medium">
-                💡 <strong>The Bottom Line:</strong> CTRE offers complete motor control features (PID + FF + Motion Profiling) that other vendors simply don&apos;t provide, making it the clear choice for competitive robotics.
-              </p>
-            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
             <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                📚 CTRE Wiring Documentation
+                🔧 Phoenix Software Resources
               </h3>
               <div className="space-y-3">
                 <a
@@ -193,22 +172,6 @@ export default function Hardware() {
                 >
                   → CANivore Introduction
                 </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → Hardware Reference (Phoenix 6)
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                🔧 Phoenix Software Resources
-              </h3>
-              <div className="space-y-3">
                 <a
                   href="https://v6.docs.ctr-electronics.com/"
                   className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
@@ -255,43 +218,28 @@ export default function Hardware() {
               <li>For this workshop, please name your CANivore: &quot;canivore&quot;</li>
             </ol>
           </div>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            CANivore Setup Configuration
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                🔧 Phoenix Tuner Settings
-              </h3>
-              <ImageBlock
-                src="/images/canivore setup/tuner hws.jpg"
-                alt="Phoenix Tuner Hardware Settings Configuration"
-                width={500}
-                height={300}
-                className="mb-4 rounded-lg"
-              />
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Configure your Phoenix Tuner settings as shown above. Make sure CANivore USB is checked and Team # or IP is set to localhost.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                📝 CANivore Naming
-              </h3>
-              <ImageBlock
-                src="/images/canivore setup/canivore name.png"
-                alt="CANivore Device Naming Configuration"
-                width={500}
-                height={300}
-                className="mb-4 rounded-lg"
-              />
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Name your CANivore device &quot;canivore&quot; for this workshop. This ensures consistency across all participants.
+          {/* GIF Demo Section - Ready for your CANivore setup GIF */}
+          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6 mt-6">
+            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-3">
+              🎬 Visual Setup Guide
+            </h3>
+            <p className="text-blue-800 dark:text-blue-300 mb-4">
+              Watch the complete CANivore setup process:
+            </p>
+            {/* 
+            Add your GIF here when ready:
+            <ImageBlock
+              src="/images/setup/canivore-setup.gif"
+              alt="Complete CANivore Setup Process"
+              width={800}
+              height={500}
+              className="rounded-lg shadow-lg"
+            />
+            */}
+            <div className="bg-blue-100 dark:bg-blue-900/50 rounded-lg p-4 text-center">
+              <p className="text-blue-700 dark:text-blue-300 text-sm">
+                📹 GIF demonstration will be added here
               </p>
             </div>
           </div>
@@ -400,16 +348,68 @@ export default function Hardware() {
           </div>
 
           <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-3">
-              💡 Quick Update Tips
+            <h4 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-4">
+              🎨 Card Colors
             </h4>
-            <ul className="space-y-2 text-blue-800 dark:text-blue-300">
-              <li>• <strong>Green motors</strong> = Up to date and ready to use</li>
-              <li>• <strong>Red/Orange motors</strong> = Need firmware updates</li>
-              <li>• <strong>Gray motors</strong> = Not responding or disconnected</li>
-              <li>• Always update all motors to the same firmware version for consistency</li>
-              <li>• Use batch update to save time when updating multiple devices</li>
-            </ul>
+            <p className="text-blue-800 dark:text-blue-300 mb-4">
+              The color of the device cards is helpful as a visual indicator of device state. The meaning of the card color is also shown as text underneath the device title.
+            </p>
+            
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-4">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th className="py-2 px-3 font-semibold text-gray-900 dark:text-gray-100">Color</th>
+                      <th className="py-2 px-3 font-semibold text-gray-900 dark:text-gray-100">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-sm">
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 px-3">
+                        <span className="inline-block w-4 h-4 bg-green-500 rounded-full mr-2"></span>
+                        <strong className="text-green-700 dark:text-green-400">Green</strong>
+                      </td>
+                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has latest firmware.</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 px-3">
+                        <span className="inline-block w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
+                        <strong className="text-purple-700 dark:text-purple-400">Purple</strong>
+                      </td>
+                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has an unexpected/beta firmware version.</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 px-3">
+                        <span className="inline-block w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
+                        <strong className="text-yellow-700 dark:text-yellow-400">Yellow</strong>
+                      </td>
+                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">A new firmware version is available. Check the changelog to determine if the new version matters to your application.</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-2 px-3">
+                        <span className="inline-block w-4 h-4 bg-red-500 rounded-full mr-2"></span>
+                        <strong className="text-red-700 dark:text-red-400">Red</strong>
+                      </td>
+                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has a duplicate ID.</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-3">
+                        <span className="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
+                        <strong className="text-blue-700 dark:text-blue-400">Blue</strong>
+                      </td>
+                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Failed to retrieve list of available firmware.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            <div className="mt-4 p-3 bg-blue-100 dark:bg-blue-900/50 rounded-lg">
+              <p className="text-blue-800 dark:text-blue-300 text-sm">
+                <strong>💡 Tip:</strong> Always update all motors to the same firmware version for consistency and use batch update to save time when updating multiple devices.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -459,50 +459,6 @@ export default function Hardware() {
               </div>
             </div>
 
-            {/* Example: How to add Canva images and code */}
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                🔧 Example: Adding Your Canva Content
-              </h4>
-
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Here&apos;s how you&apos;ll add images and code from your
-                presentation:
-              </p>
-
-              <CodeBlock
-                title="Motor Configuration Example"
-                filename="Robot.java"
-                language="java"
-                code={`// Example: Basic motor setup from your Canva slides
-TalonFX motor = new TalonFX(1, "CANivore");
-TalonFXConfiguration config = new TalonFXConfiguration();
-
-// Apply factory defaults
-motor.getConfigurator().apply(config);
-
-// Set control mode
-motor.setControl(new VoltageOut(2.0)); // 2V output`}
-              />
-
-              <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-900">
-                <p className="text-blue-800 dark:text-blue-300 text-sm">
-                  <strong>📋 To add your content:</strong>
-                  <br />
-                  1. Export slides as PNG from Canva
-                  <br />
-                  2. Save to <code>/public/images/</code>
-                  <br />
-                  3. Use{" "}
-                  <code>
-                    &lt;ImageBlock src=&quot;/images/your-image.png&quot;
-                    alt=&quot;Description&quot; /&gt;
-                  </code>
-                  <br />
-                  4. Use <code>&lt;CodeBlock&gt;</code> for code snippets
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
