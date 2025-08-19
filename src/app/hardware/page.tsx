@@ -326,8 +326,8 @@ export default function Hardware() {
             Motor Update Process & Status Colors
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+          <div className="mb-8">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                 📱 How to Update Motors
               </h3>
@@ -340,22 +340,6 @@ export default function Hardware() {
               />
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Use Phoenix Tuner to update your motor firmware. Select devices and use the batch update feature to ensure all motors are running the latest firmware version.
-              </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                🎨 Motor Status Color Meanings
-              </h3>
-              <ImageBlock
-                src="/images/update/status meaning.jpg"
-                alt="Motor Status Color Coding in Phoenix Tuner"
-                width={400}
-                height={300}
-                className="mb-4 rounded-lg"
-              />
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Different colors in Phoenix Tuner indicate the status of your motors. Understanding these colors helps you quickly identify which devices need attention.
               </p>
             </div>
           </div>
@@ -403,7 +387,7 @@ export default function Hardware() {
                           <strong className="text-yellow-700 dark:text-yellow-400">Yellow</strong>
                         </div>
                       </td>
-                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">A new firmware version is available. Check the changelog to determine if the new version matters to your application.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">A new firmware version is available.</td>
                     </tr>
                     <tr className="border-b border-gray-100 dark:border-gray-800">
                       <td className="py-3 px-3 align-top">
