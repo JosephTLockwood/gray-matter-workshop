@@ -85,15 +85,15 @@ export default function Hardware() {
                 CANivore
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-3">
-                Adds a new CAN network that allows motors to be updated more
-                frequently and communicate faster. Also enables you to control
-                motors without a roboRIO.
+                USB-to-CAN FD device that adds a secondary CAN FD bus to the roboRIO.
+                Enables hardware-attached simulation and direct control of CTRE devices
+                during development.
               </p>
               <div className="bg-purple-50 dark:bg-purple-950/30 p-3 rounded-lg">
                 <p className="text-sm text-purple-800 dark:text-purple-300">
-                  <strong>Key Features:</strong> 1000Hz update rate, reduced
-                  roboRIO load, standalone motor control, improved real-time
-                  performance.
+                  <strong>Key Features:</strong> 1000Hz update rate (vs 50Hz roboRIO), 
+                  CAN FD technology for improved bandwidth, hardware-attached simulation support, 
+                  direct USB connection for development.
                 </p>
               </div>
             </div>
@@ -171,24 +171,48 @@ export default function Hardware() {
               </h3>
               <div className="space-y-3">
                 <a
-                  href="https://v6.docs.ctr-electronics.com/en/2024/docs/canivore/canivore-setup.html"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-intro.html"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → CANivore Introduction
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-setup.html"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   → CANivore Setup Guide
                 </a>
                 <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-hardware-attached.html"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  → CANivore Documentation (Phoenix 6)
+                  → CANivore Hardware-Attached Simulation
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-api.html"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → CANivore API Reference
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-config.html"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → CANivore Configuration
                 </a>
                 <a
                   href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -204,7 +228,7 @@ export default function Hardware() {
               <div className="space-y-3">
                 <a
                   href="https://v6.docs.ctr-electronics.com/"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -212,7 +236,7 @@ export default function Hardware() {
                 </a>
                 <a
                   href="https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -220,7 +244,7 @@ export default function Hardware() {
                 </a>
                 <a
                   href="https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/"
-                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -271,7 +295,7 @@ export default function Hardware() {
                     If you have issues connecting to your robot,
                     <a
                       href="https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/connecting.html#connecting-tuner"
-                      className="text-blue-600 hover:underline dark:text-blue-400 ml-1"
+                      className="text-blue-600 underline hover:no-underline dark:text-blue-400 ml-1"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

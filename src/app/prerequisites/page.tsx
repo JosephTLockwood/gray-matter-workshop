@@ -24,10 +24,10 @@ export default function Prerequisites() {
               <div className="border-l-4 border-blue-200 dark:border-blue-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html" 
-                     className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">
+                     className="text-blue-600 underline hover:no-underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">
                     WPILib
                   </a> & <a href="https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#553883"
-                           className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">
+                           className="text-blue-600 underline hover:no-underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">
                     Game Tools
                   </a>
                 </h3>
@@ -39,7 +39,7 @@ export default function Prerequisites() {
               <div className="border-l-4 border-green-200 dark:border-green-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://apps.microsoft.com/detail/9NVV4PWDW27Z" 
-                     className="text-green-600 hover:underline dark:text-green-400" target="_blank" rel="noopener noreferrer">
+                     className="text-green-600 underline hover:no-underline dark:text-green-400" target="_blank" rel="noopener noreferrer">
                     Phoenix Tuner X
                   </a>
                 </h3>
@@ -51,7 +51,7 @@ export default function Prerequisites() {
               <div className="border-l-4 border-purple-200 dark:border-purple-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://git-scm.com/downloads" 
-                     className="text-purple-600 hover:underline dark:text-purple-400" target="_blank" rel="noopener noreferrer">
+                     className="text-purple-600 underline hover:no-underline dark:text-purple-400" target="_blank" rel="noopener noreferrer">
                     Git
                   </a>
                 </h3>
@@ -63,7 +63,7 @@ export default function Prerequisites() {
               <div className="border-l-4 border-orange-200 dark:border-orange-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://github.com/mjansen4857/pathplanner/releases" 
-                     className="text-orange-600 hover:underline dark:text-orange-400" target="_blank" rel="noopener noreferrer">
+                     className="text-orange-600 underline hover:no-underline dark:text-orange-400" target="_blank" rel="noopener noreferrer">
                     PathPlanner
                   </a>
                 </h3>
@@ -75,7 +75,7 @@ export default function Prerequisites() {
               <div className="border-l-4 border-red-200 dark:border-red-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://github.com/Gold872/elastic-dashboard" 
-                     className="text-red-600 hover:underline dark:text-red-400" target="_blank" rel="noopener noreferrer">
+                     className="text-red-600 underline hover:no-underline dark:text-red-400" target="_blank" rel="noopener noreferrer">
                     Elastic Dashboard
                   </a>
                 </h3>
@@ -87,7 +87,7 @@ export default function Prerequisites() {
               <div className="border-l-4 border-yellow-200 dark:border-yellow-900 pl-4">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                   <a href="https://www.codecademy.com/learn/learn-java" 
-                     className="text-yellow-600 hover:underline dark:text-yellow-400" target="_blank" rel="noopener noreferrer">
+                     className="text-yellow-600 underline hover:no-underline dark:text-yellow-400" target="_blank" rel="noopener noreferrer">
                     Java Knowledge
                   </a>
                 </h3>
@@ -98,36 +98,6 @@ export default function Prerequisites() {
             </div>
           </div>
 
-          {/* Hardware Requirements */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
-            <h2 className="text-2xl font-bold text-green-600 mb-4">🔧 Hardware</h2>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-4xl mb-3">⚡</div>
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Kraken</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  CTRE Motor. Comes with a built-in motor controller called TalonFX.
-                </p>
-              </div>
-
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-4xl mb-3">🎯</div>
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">CANCoder</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Absolute encoder. Gets the angle of a mechanism. Useful in things like swerve modules and arms.
-                </p>
-              </div>
-
-              <div className="text-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-4xl mb-3">🌐</div>
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">CANivore</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Adds a new CAN network that allows motors to be updated more frequently and communicate faster. Also enables you to control motors without a roboRIO.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6 mb-8">
