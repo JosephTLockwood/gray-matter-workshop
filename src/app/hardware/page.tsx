@@ -128,9 +128,24 @@ export default function Hardware() {
           </h2>
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800 mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
               🎯 CTRE&apos;s Unique Advantages
             </h3>
+            
+            {/* CTRE Comparison Image */}
+            <div className="mb-8 text-center">
+              <ImageBlock
+                src="/images/ctre/ctre advantage.png"
+                alt="CTRE vs Other Vendors Comparison"
+                width={800}
+                height={400}
+                className="rounded-lg shadow-lg mx-auto"
+              />
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                CTRE provides comprehensive motor control features that competitors lack
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Full PID Control</h4>
@@ -177,38 +192,6 @@ export default function Hardware() {
                   rel="noopener noreferrer"
                 >
                   → CANivore Introduction
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-setup.html"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → CANivore Setup Guide
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-hardware-attached.html"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → CANivore Hardware-Attached Simulation
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-api.html"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → CANivore API Reference
-                </a>
-                <a
-                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/canivore-config.html"
-                  className="block text-blue-600 underline hover:no-underline hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  → CANivore Configuration
                 </a>
                 <a
                   href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/"
@@ -266,9 +249,51 @@ export default function Hardware() {
             </h3>
             <ol className="list-decimal list-inside space-y-2 text-yellow-800 dark:text-yellow-300">
               <li>Plug the computer into CANivore</li>
-              <li>Make sure the CANivore USB is checked</li>
+              <li>Make sure the &quot;CANivore USB&quot; is checked</li>
+              <li>Change &quot;Team # or IP&quot; to &quot;localhost&quot;</li>
               <li>Your CANivore should now appear in Phoenix Tuner</li>
+              <li>For this workshop, please name your CANivore: &quot;canivore&quot;</li>
             </ol>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            CANivore Setup Configuration
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                🔧 Phoenix Tuner Settings
+              </h3>
+              <ImageBlock
+                src="/images/canivore setup/tuner hws.jpg"
+                alt="Phoenix Tuner Hardware Settings Configuration"
+                width={500}
+                height={300}
+                className="mb-4 rounded-lg"
+              />
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Configure your Phoenix Tuner settings as shown above. Make sure CANivore USB is checked and Team # or IP is set to localhost.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                📝 CANivore Naming
+              </h3>
+              <ImageBlock
+                src="/images/canivore setup/canivore name.png"
+                alt="CANivore Device Naming Configuration"
+                width={500}
+                height={300}
+                className="mb-4 rounded-lg"
+              />
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Name your CANivore device &quot;canivore&quot; for this workshop. This ensures consistency across all participants.
+              </p>
+            </div>
           </div>
         </section>
 
