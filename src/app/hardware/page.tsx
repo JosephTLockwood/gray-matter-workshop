@@ -124,6 +124,115 @@ export default function Hardware() {
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            Why We Choose CTRE Hardware
+          </h2>
+          
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800 mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              🎯 CTRE's Unique Advantages
+            </h3>
+            <div className="grid md:grid-cols-4 gap-4">
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-2">Full PID Control</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Complete PID implementation with kP, kI, kD, and advanced filtering options that other vendors don't provide.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-purple-600 dark:text-purple-400 mb-2">FeedForward (FF)</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Built-in feedforward control for gravity compensation and velocity control that competitors lack.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-green-600 dark:text-green-400 mb-2">Motion Profiling</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Advanced Motion Magic and motion profiling capabilities for smooth, controlled movements.
+                </p>
+              </div>
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+                <h4 className="font-bold text-orange-600 dark:text-orange-400 mb-2">Rotations Units</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Motor positions measured in intuitive rotations instead of confusing encoder ticks or radians.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-950/30 rounded-lg border border-yellow-200 dark:border-yellow-900">
+              <p className="text-yellow-800 dark:text-yellow-300 font-medium">
+                💡 <strong>The Bottom Line:</strong> CTRE offers complete motor control features (PID + FF + Motion Profiling) that other vendors simply don't provide, making it the clear choice for competitive robotics.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                📚 CTRE Wiring Documentation
+              </h3>
+              <div className="space-y-3">
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/2024/docs/canivore/canivore-setup.html"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → CANivore Setup Guide
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/canivore/"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → CANivore Documentation (Phoenix 6)
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/hardware-reference/"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → Hardware Reference (Phoenix 6)
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                🔧 Phoenix Software Resources
+              </h3>
+              <div className="space-y-3">
+                <a
+                  href="https://v6.docs.ctr-electronics.com/"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → Phoenix 6 Documentation
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/api-reference/"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → Phoenix 6 API Reference
+                </a>
+                <a
+                  href="https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/"
+                  className="block text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  → Phoenix Tuner X Documentation
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Connecting to Your Device
           </h2>
 
@@ -199,6 +308,59 @@ export default function Hardware() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            Motor Update Process & Status Colors
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                📱 How to Update Motors
+              </h3>
+              <ImageBlock
+                src="/images/update/update.jpg"
+                alt="Motor Update Process in Phoenix Tuner"
+                width={400}
+                height={300}
+                className="mb-4 rounded-lg"
+              />
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Use Phoenix Tuner to update your motor firmware. Select devices and use the batch update feature to ensure all motors are running the latest firmware version.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+                🎨 Motor Status Color Meanings
+              </h3>
+              <ImageBlock
+                src="/images/update/status meaning.jpg"
+                alt="Motor Status Color Coding in Phoenix Tuner"
+                width={400}
+                height={300}
+                className="mb-4 rounded-lg"
+              />
+              <p className="text-gray-600 dark:text-gray-300 text-sm">
+                Different colors in Phoenix Tuner indicate the status of your motors. Understanding these colors helps you quickly identify which devices need attention.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6">
+            <h4 className="text-lg font-semibold text-blue-900 dark:text-blue-300 mb-3">
+              💡 Quick Update Tips
+            </h4>
+            <ul className="space-y-2 text-blue-800 dark:text-blue-300">
+              <li>• <strong>Green motors</strong> = Up to date and ready to use</li>
+              <li>• <strong>Red/Orange motors</strong> = Need firmware updates</li>
+              <li>• <strong>Gray motors</strong> = Not responding or disconnected</li>
+              <li>• Always update all motors to the same firmware version for consistency</li>
+              <li>• Use batch update to save time when updating multiple devices</li>
+            </ul>
           </div>
         </section>
 

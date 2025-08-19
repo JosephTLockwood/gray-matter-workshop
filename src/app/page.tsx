@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -53,6 +54,53 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Mechanisms Section */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
+          Mechanisms We&apos;ll Program
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800">
+            <div className="mb-4">
+              <Image
+                src="/images/mechanisms/arm.jpg"
+                alt="Robot Arm Mechanism"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+              Robot Arm
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Learn to program a multi-jointed robot arm with precise positioning control. 
+              Master PID tuning, encoder feedback, and motion profiling to achieve smooth, 
+              accurate movements for game piece manipulation.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800">
+            <div className="mb-4">
+              <Image
+                src="/images/mechanisms/flywheel.png"
+                alt="Flywheel Mechanism"
+                width={400}
+                height={300}
+                className="w-full h-48 object-cover rounded-lg"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+              Flywheel Shooter
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Program a high-speed flywheel shooter system for consistent game piece 
+              launching. Explore velocity control, feedforward calculations, and 
+              real-time adjustments for accuracy across varying distances.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Team Introduction */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 p-8 rounded-lg">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">
@@ -60,20 +108,38 @@ export default function Home() {
         </h2>
         <div className="flex justify-center space-x-8 flex-wrap gap-4">
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-2">
-              JB
+            <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-2">
+              <Image
+                src="/images/presentors/joshPhoto.jpg"
+                alt="Josh Bacon"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <p className="font-semibold">Josh Bacon</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-2">
-              AH
+            <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-2">
+              <Image
+                src="/images/presentors/alexPhoto.jpg"
+                alt="Alex Haltom"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <p className="font-semibold">Alex Haltom</p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-2">
-              JL
+            <div className="w-16 h-16 rounded-full overflow-hidden mx-auto mb-2">
+              <Image
+                src="/images/presentors/joePhoto.jpg"
+                alt="Joe Lockwood"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <p className="font-semibold">Joe Lockwood</p>
           </div>

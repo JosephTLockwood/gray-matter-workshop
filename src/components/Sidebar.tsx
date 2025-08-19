@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTheme } from "./ThemeProvider";
 
 /**
  * Main navigation items (Home, Introduction, Prerequisites)
@@ -209,6 +210,7 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true); // Default open on desktop
   const [isWorkshop1Open, setIsWorkshop1Open] = useState(true); // Workshop 1 sections open by default
   const pathname = usePathname();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   return (
     <>
@@ -429,6 +431,87 @@ export default function Sidebar() {
                 </div>
               </div>
             )}
+
+            {/* Theme Toggle */}
+            <div className={`pt-4 ${isOpen ? "border-t border-gray-200 dark:border-gray-800" : ""}`}>
+              {isOpen ? (
+                <div className="px-4">
+                  <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">
+                    Theme
+                  </p>
+                  <div className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
+                    <button
+                      onClick={() => setTheme("light")}
+                      className={`flex items-center justify-center px-3 py-2 text-xs font-medium rounded-md transition-all duration-200 ${
+                        theme === "light"
+                          ? "bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-gray-100"
+                          : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                      }`}
+                      title="Light mode"
+                    >
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                      Light
+                    </button>
+                    <button
+                      onClick={() => setTheme("dark")}
+                      className={`flex items-center justify-center px-3 py-2 text-xs font-medium rounded-md transition-all duration-200 ${
+                        theme === "dark"
+                          ? "bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-gray-100"
+                          : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                      }`}
+                      title="Dark mode"
+                    >
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                      </svg>
+                      Dark
+                    </button>
+                    <button
+                      onClick={() => setTheme("system")}
+                      className={`flex items-center justify-center px-3 py-2 text-xs font-medium rounded-md transition-all duration-200 ${
+                        theme === "system"
+                          ? "bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-gray-100"
+                          : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                      }`}
+                      title="System preference"
+                    >
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Auto
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="relative group">
+                  <button
+                    onClick={() => {
+                      const nextTheme = theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+                      setTheme(nextTheme);
+                    }}
+                    className="flex items-center justify-center w-full px-3 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors dark:text-gray-300 dark:hover:text-gray-100 dark:hover:bg-gray-800"
+                    title={`Current: ${theme} (${resolvedTheme})`}
+                  >
+                    {resolvedTheme === "dark" ? (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    )}
+                  </button>
+
+                  {/* Tooltip for collapsed theme toggle */}
+                  <div className="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50 dark:bg-gray-200 dark:text-gray-900">
+                    Theme: {theme} ({resolvedTheme})
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
         </div>
       </div>
