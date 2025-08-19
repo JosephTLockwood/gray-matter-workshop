@@ -273,7 +273,7 @@ export default function Sidebar() {
               {isOpen ? (
                 <>
                   <img
-                    src="/images/gray-matter-logo.png"
+                    src="/images/gray-matter-logo.jpg"
                     alt="Gray Matter Logo"
                     className="w-10 h-10 rounded-lg"
                   />
@@ -281,7 +281,7 @@ export default function Sidebar() {
                 </>
               ) : (
                 <img
-                  src="/images/gray-matter-logo.png"
+                  src="/images/gray-matter-logo.jpg"
                   alt="Gray Matter Logo"
                   className="w-8 h-8 rounded-lg"
                 />
