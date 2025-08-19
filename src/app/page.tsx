@@ -74,7 +74,7 @@ export default function Home() {
               Robot Arm
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Learn to program a multi-jointed robot arm with precise positioning control. 
+              Learn to program a robot arm with precise positioning control. 
               Master PID tuning, encoder feedback, and motion profiling to achieve smooth, 
               accurate movements for game piece manipulation.
             </p>
