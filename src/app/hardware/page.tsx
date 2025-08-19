@@ -373,45 +373,55 @@ export default function Hardware() {
                 <table className="w-full text-left">
                   <thead>
                     <tr className="border-b border-gray-200 dark:border-gray-700">
-                      <th className="py-2 px-3 font-semibold text-gray-900 dark:text-gray-100">Color</th>
+                      <th className="py-2 px-3 font-semibold text-gray-900 dark:text-gray-100 w-32">Color</th>
                       <th className="py-2 px-3 font-semibold text-gray-900 dark:text-gray-100">Description</th>
                     </tr>
                   </thead>
                   <tbody className="text-sm">
                     <tr className="border-b border-gray-100 dark:border-gray-800">
-                      <td className="py-2 px-3">
-                        <span className="inline-block w-4 h-4 bg-green-500 rounded-full mr-2"></span>
-                        <strong className="text-green-700 dark:text-green-400">Green</strong>
+                      <td className="py-3 px-3 align-top">
+                        <div className="flex items-center whitespace-nowrap">
+                          <span className="inline-block w-4 h-4 bg-green-500 rounded-full mr-2 flex-shrink-0"></span>
+                          <strong className="text-green-700 dark:text-green-400">Green</strong>
+                        </div>
                       </td>
-                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has latest firmware.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">Device has latest firmware.</td>
                     </tr>
                     <tr className="border-b border-gray-100 dark:border-gray-800">
-                      <td className="py-2 px-3">
-                        <span className="inline-block w-4 h-4 bg-purple-500 rounded-full mr-2"></span>
-                        <strong className="text-purple-700 dark:text-purple-400">Purple</strong>
+                      <td className="py-3 px-3 align-top">
+                        <div className="flex items-center whitespace-nowrap">
+                          <span className="inline-block w-4 h-4 bg-purple-500 rounded-full mr-2 flex-shrink-0"></span>
+                          <strong className="text-purple-700 dark:text-purple-400">Purple</strong>
+                        </div>
                       </td>
-                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has an unexpected/beta firmware version.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">Device has an unexpected/beta firmware version.</td>
                     </tr>
                     <tr className="border-b border-gray-100 dark:border-gray-800">
-                      <td className="py-2 px-3">
-                        <span className="inline-block w-4 h-4 bg-yellow-500 rounded-full mr-2"></span>
-                        <strong className="text-yellow-700 dark:text-yellow-400">Yellow</strong>
+                      <td className="py-3 px-3 align-top">
+                        <div className="flex items-center whitespace-nowrap">
+                          <span className="inline-block w-4 h-4 bg-yellow-500 rounded-full mr-2 flex-shrink-0"></span>
+                          <strong className="text-yellow-700 dark:text-yellow-400">Yellow</strong>
+                        </div>
                       </td>
-                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">A new firmware version is available. Check the changelog to determine if the new version matters to your application.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">A new firmware version is available. Check the changelog to determine if the new version matters to your application.</td>
                     </tr>
                     <tr className="border-b border-gray-100 dark:border-gray-800">
-                      <td className="py-2 px-3">
-                        <span className="inline-block w-4 h-4 bg-red-500 rounded-full mr-2"></span>
-                        <strong className="text-red-700 dark:text-red-400">Red</strong>
+                      <td className="py-3 px-3 align-top">
+                        <div className="flex items-center whitespace-nowrap">
+                          <span className="inline-block w-4 h-4 bg-red-500 rounded-full mr-2 flex-shrink-0"></span>
+                          <strong className="text-red-700 dark:text-red-400">Red</strong>
+                        </div>
                       </td>
-                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Device has a duplicate ID.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">Device has a duplicate ID.</td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-3">
-                        <span className="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
-                        <strong className="text-blue-700 dark:text-blue-400">Blue</strong>
+                      <td className="py-3 px-3 align-top">
+                        <div className="flex items-center whitespace-nowrap">
+                          <span className="inline-block w-4 h-4 bg-blue-500 rounded-full mr-2 flex-shrink-0"></span>
+                          <strong className="text-blue-700 dark:text-blue-400">Blue</strong>
+                        </div>
                       </td>
-                      <td className="py-2 px-3 text-gray-700 dark:text-gray-300">Failed to retrieve list of available firmware.</td>
+                      <td className="py-3 px-3 text-gray-700 dark:text-gray-300 align-top">Failed to retrieve list of available firmware.</td>
                     </tr>
                   </tbody>
                 </table>
