@@ -4,21 +4,21 @@ import GitHubPage from "@/components/GitHubPage";
 export default function Programming() {
   return (
     <PageTemplate 
-      title="Programming ARM and Flywheel"
+      title="Programming Arm and Flywheel"
       previousPage={{ href: "/command-framework", title: "Command Framework" }}
       nextPage={{ href: "/control-systems", title: "Control Systems" }}
     >
       <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800 mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Programming ARM and Flywheel</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Programming Arm and Flywheel</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
-          In this section, we&apos;ll program common FRC mechanisms starting with our ARM subsystem. 
+          In this section, we&apos;ll program common FRC mechanisms starting with our Arm subsystem. 
           We&apos;ll build upon this initial implementation throughout the workshop.
         </p>
         
         <div className="bg-green-50 dark:bg-green-950/30 p-4 rounded-lg mb-6">
           <h3 className="font-semibold text-green-900 dark:text-green-300 mb-2">What You&apos;ll Learn:</h3>
           <ul className="list-disc list-inside text-green-800 dark:text-green-300 space-y-1">
-            <li>Setting up subsystems for ARM and Flywheel</li>
+            <li>Setting up subsystems for Arm and Flywheel</li>
             <li>Creating motor and sensor configurations</li>
             <li>Implementing control methods</li>
             <li>Command creation and deployment</li>
@@ -66,12 +66,12 @@ export default function Programming() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Initial ARM Subsystem</h2>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Initial Arm Subsystem</h2>
         
         <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6 mb-6">
           <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">📋 Starting Point</h3>
           <p className="text-blue-800 dark:text-blue-300">
-            This is our initial ARM implementation. Throughout the workshop, we&apos;ll enhance this code by adding:
+            This is our initial Arm implementation. Throughout the workshop, we&apos;ll enhance this code by adding:
             PID control, feedforward, position control, safety limits, and more sophisticated commands.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function Programming() {
           repository="Hemlock5712/2025-Workshop"
           filePath="src/main/java/frc/robot/subsystems/Arm.java"
           branch="3372fcaad9eb76922688eb5383efc9a650affd10"
-          title="Initial ARM Subsystem Implementation"
+          title="Initial Arm Subsystem Implementation"
           description="This is our starting point for the workshop. We&apos;ll progressively enhance this code throughout the learning process."
         />
 
