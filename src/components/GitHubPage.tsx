@@ -69,7 +69,7 @@ export default function GitHubPage({
 
   if (loading) {
     return (
-      <div className={`my-8 ${className}`}>
+      <div className={`${className}`}>
         <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-8 text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-300">Loading file...</p>
@@ -80,7 +80,7 @@ export default function GitHubPage({
 
   if (error || !fileContent) {
     return (
-      <div className={`my-8 ${className}`}>
+      <div className={`${className}`}>
         <div className="bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900 rounded-lg p-6">
           <h3 className="text-red-800 dark:text-red-300 font-semibold mb-2">
             Failed to Load File
@@ -144,7 +144,7 @@ export default function GitHubPage({
   const language = getLanguageFromExtension(filename);
 
   return (
-    <div className={`my-8 ${className}`}>
+    <div className={`${className}`}>
       {title && (
         <div className="mb-6">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
@@ -157,7 +157,7 @@ export default function GitHubPage({
       )}
 
       {/* File Header */}
-      <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm mb-6">
+      <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm mb-6 overflow-hidden">
         <div className="border-b border-gray-200 dark:border-gray-800 p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">

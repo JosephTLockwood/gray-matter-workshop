@@ -8,7 +8,7 @@ export default function Programming() {
       previousPage={{ href: "/command-framework", title: "Command Framework" }}
       nextPage={{ href: "/control-systems", title: "Control Systems" }}
     >
-      <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800 mb-8">
+      <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Programming ARM and Flywheel</h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
           In this section, we&apos;ll program common FRC mechanisms starting with our ARM subsystem. 
@@ -27,8 +27,8 @@ export default function Programming() {
         </div>
       </div>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Workshop Development Approach</h2>
+      <section className="flex flex-col gap-8">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Workshop Development Approach</h2>
         
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
           <div className="grid md:grid-cols-2 gap-8">
@@ -65,10 +65,10 @@ export default function Programming() {
         </div>
       </section>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Initial ARM Subsystem</h2>
+      <section className="flex flex-col gap-8">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Initial ARM Subsystem</h2>
         
-        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6 mb-6">
+        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6">
           <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">📋 Starting Point</h3>
           <p className="text-blue-800 dark:text-blue-300">
             This is our initial ARM implementation. Throughout the workshop, we&apos;ll enhance this code by adding:
@@ -76,15 +76,23 @@ export default function Programming() {
           </p>
         </div>
 
+        <iframe 
+          src="https://www.youtube.com/embed/Qi94fcIfop0"
+          title="Project Setup Tutorial"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="w-full h-full aspect-video rounded-lg"
+        />
+
         <GitHubPage
-          repository="Hemlock5712/2025-Workshop"
+          repository="Hemlock5712/Workshop-Code"
           filePath="src/main/java/frc/robot/subsystems/Arm.java"
-          branch="3372fcaad9eb76922688eb5383efc9a650affd10"
+          branch="1-Subsystem"
           title="Initial ARM Subsystem Implementation"
           description="This is our starting point for the workshop. We&apos;ll progressively enhance this code throughout the learning process."
         />
 
-        <div className="mt-6 grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-800">
             <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3">🔧 Key Components</h4>
             <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-2">
@@ -107,8 +115,8 @@ export default function Programming() {
         </div>
       </section>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Workshop Progression</h2>
+      <section className="flex flex-col gap-8">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Workshop Progression</h2>
         
         <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/30 dark:to-blue-950/30 rounded-lg p-6">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">🚀 What We&apos;ll Build Next</h3>

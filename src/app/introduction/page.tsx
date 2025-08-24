@@ -1,31 +1,18 @@
+import PageTemplate from "@/components/PageTemplate";
 import Link from "next/link";
 
 export default function Introduction() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
-        <Link 
-          href="/"
-          className="text-blue-600 hover:text-blue-800 font-medium dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          ← Back to Home
-        </Link>
-      </div>
-
-      <div className="prose prose-lg max-w-none dark:prose-invert">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">
-          Gray Matter Coding Workshop
-        </h1>
-
-        <div className="bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-400 dark:border-blue-900 p-6 mb-8">
+    <PageTemplate title="Gray Matter Coding Workshop" previousPage={{ href: "/", title: "Home" }} nextPage={{ href: "/prerequisites", title: "Prerequisites" }}>
+        <div className="bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-400 dark:border-blue-900 p-6">
           <p className="text-lg font-medium text-blue-900 dark:text-blue-300 mb-2">Quick Note</p>
           <p className="text-blue-800 dark:text-blue-300">
             All underlined text and images of code or products will have built-in links to resources
           </p>
         </div>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Why are we here?</h2>
+        <section className="flex flex-col gap-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Why are we here?</h2>
           <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
             <ul className="space-y-4 text-lg">
               <li className="flex items-start">
@@ -40,8 +27,8 @@ export default function Introduction() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Our Goal</h2>
+        <section className="flex flex-col gap-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Our Goal</h2>
           <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/30 dark:to-blue-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
             <p className="text-lg text-gray-700 dark:text-gray-300">
               Cover code architecture, subsystems structure, PID tuning, libraries, odometry, vision, and more!
@@ -49,8 +36,8 @@ export default function Introduction() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Target Audience</h2>
+        <section className="flex flex-col gap-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Target Audience</h2>
           <div className="bg-yellow-50 dark:bg-yellow-950/30 rounded-lg p-8 border border-yellow-200 dark:border-yellow-900">
             <p className="text-lg text-gray-700 dark:text-gray-300">
               <strong>FRC Teams using Java and CTRE Hardware</strong>
@@ -58,8 +45,8 @@ export default function Introduction() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Choose Your Workshop</h2>
+        <section className="flex flex-col gap-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">Choose Your Workshop</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Workshop #1 */}
@@ -182,17 +169,6 @@ export default function Introduction() {
             </div>
           </div>
         </section>
-
-        <div className="flex justify-between items-center pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div></div>
-          <Link 
-            href="/prerequisites"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Next: Prerequisites →
-          </Link>
-        </div>
-      </div>
-    </div>
+    </PageTemplate>
   );
 }

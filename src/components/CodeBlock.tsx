@@ -64,7 +64,7 @@ export default function CodeBlock({
   };
 
   return (
-    <div className={`my-6 bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg border border-gray-700 ${className}`}>
+    <div className={`bg-[#1e1e1e] rounded-lg overflow-hidden shadow-lg border border-gray-700 ${className}`}>
       {(title || filename) && (
         <div className="bg-[#2d2d30] px-4 py-3 border-b border-gray-600 flex justify-between items-center">
           <div className="flex items-center space-x-3">

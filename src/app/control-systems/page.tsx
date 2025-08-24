@@ -7,7 +7,7 @@ export default function ControlSystems() {
       previousPage={{ href: "/programming", title: "Programming" }}
       nextPage={{ href: "/tuning", title: "Tuning" }}
     >
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
+      <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
           <h3 className="text-xl font-bold text-blue-600 mb-4">Feedforward Control</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-4">

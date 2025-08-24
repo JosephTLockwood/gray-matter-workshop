@@ -1,21 +1,10 @@
+import PageTemplate from "@/components/PageTemplate";
 import Link from "next/link";
 
 export default function Prerequisites() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="mb-8">
-        <Link 
-          href="/introduction"
-          className="text-blue-600 hover:text-blue-800 font-medium dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          ← Back to Introduction
-        </Link>
-      </div>
-
-      <div className="prose prose-lg max-w-none dark:prose-invert">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">Prerequisites</h1>
-
-        <div className="grid gap-6 mb-12">
+    <PageTemplate title="Prerequisites" previousPage={{ href: "/introduction", title: "Introduction" }} nextPage={{ href: "/hardware", title: "Hardware Setup" }}>
+        <div className="grid gap-6">
           {/* Software Requirements */}
           <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
             <h2 className="text-2xl font-bold text-blue-600 mb-4">📋 Software Requirements</h2>
@@ -97,7 +86,6 @@ export default function Prerequisites() {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6 mb-8">
@@ -106,22 +94,6 @@ export default function Prerequisites() {
             Make sure you have all the prerequisites installed before proceeding to the hardware setup section.
           </p>
         </div>
-
-        <div className="flex justify-between items-center pt-8 border-t border-gray-200 dark:border-gray-800">
-          <Link 
-            href="/introduction"
-            className="text-gray-600 hover:text-gray-800 font-medium dark:text-gray-300 dark:hover:text-gray-100"
-          >
-            ← Previous: Introduction
-          </Link>
-          <Link 
-            href="/hardware"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Next: Hardware Setup →
-          </Link>
-        </div>
-      </div>
-    </div>
+      </PageTemplate>
   );
 }

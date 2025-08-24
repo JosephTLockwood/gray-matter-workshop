@@ -7,7 +7,7 @@ export default function CommandFramework() {
       previousPage={{ href: "/project-setup", title: "Project Setup" }}
       nextPage={{ href: "/programming", title: "Programming" }}
     >
-      <div className="grid md:grid-cols-3 gap-6 mb-8">
+      <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800">
           <h3 className="text-xl font-bold text-blue-600 mb-3">Triggers</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-3">Use BooleanSuppliers (True or False)</p>
