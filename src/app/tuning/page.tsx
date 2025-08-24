@@ -4,6 +4,7 @@ import { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
 import GitHubPR from "@/components/GitHubPR";
 import GitHubPage from "@/components/GitHubPage";
+import ArmTuning from "@/components/ArmTuning";
 
 export default function Tuning() {
   const [activeTab, setActiveTab] = useState<"ide" | "diff">("ide");
@@ -121,6 +122,13 @@ export default function Tuning() {
             )}
           </div>
         </div>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+          Interactive Arm PID Tuning Simulator
+        </h2>
+        <ArmTuning />
       </section>
     </PageTemplate>
   );
