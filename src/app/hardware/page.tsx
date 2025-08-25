@@ -81,8 +81,8 @@ export default function Hardware() {
             </p>
             <div className="bg-purple-50 dark:bg-purple-950/30 p-3 rounded-lg">
               <p className="text-sm text-purple-800 dark:text-purple-300">
-                <strong>Key Features:</strong> 1000Hz update rate (vs 50Hz roboRIO), 
-                CAN FD technology for improved bandwidth, hardware-attached simulation support, 
+                <strong>Key Features:</strong> 1000Hz update rate (vs 50Hz roboRIO),
+                CAN FD technology for improved bandwidth, hardware-attached simulation support,
                 direct USB connection for development.
               </p>
             </div>
@@ -115,7 +115,7 @@ export default function Hardware() {
                 </p>
                 <p className="text-blue-700 dark:text-blue-300">
                   We&apos;ll be programming an arm mechanism to demonstrate
-                  motor control and positioning. Learn PID tuning, encoder feedback, 
+                  motor control and positioning. Learn PID tuning, encoder feedback,
                   and motion profiling for precise positioning control.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export default function Hardware() {
         <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
           Why We Choose CTRE Hardware
         </h2>
-        
+
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
             🎯 CTRE&apos;s Unique Advantages
@@ -159,7 +159,7 @@ export default function Hardware() {
               </p>
             </div>
           </div>
-          
+
           {/* Phoenix Software Resources - moved inside CTRE advantages */}
           <div className="mt-8">
             <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
@@ -298,7 +298,7 @@ export default function Hardware() {
               📱 How to Update Motors
             </h3>
 
-            <iframe 
+            <iframe
               src="https://www.youtube.com/embed/aktcCtcrEyY"
               title="Motor Update Process"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -319,7 +319,7 @@ export default function Hardware() {
           <p className="text-blue-800 dark:text-blue-300 mb-4">
             The color of the device cards is helpful as a visual indicator of device state. The meaning of the card color is also shown as text underneath the device title.
           </p>
-          
+
           <div className="bg-white dark:bg-gray-900 rounded-lg p-4">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
@@ -379,7 +379,7 @@ export default function Hardware() {
               </table>
             </div>
           </div>
-          
+
           <div className="mt-4 p-3 bg-blue-100 dark:bg-blue-900/50 rounded-lg">
             <p className="text-blue-800 dark:text-blue-300 text-sm">
               <strong>💡 Tip:</strong> Always update all motors to the same firmware version for consistency and use batch update to save time when updating multiple devices.
@@ -397,7 +397,7 @@ export default function Hardware() {
           If you are having issues connecting to your CANivore or other devices, make sure to update your CANivore firmware.
         </p>
 
-        <iframe 
+        <iframe
           src="https://www.youtube.com/embed/TkScJADvD-Y"
           title="CANivore Setup"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -453,7 +453,7 @@ export default function Hardware() {
           </div>
         </div>
 
-        <iframe 
+        <iframe
           src="https://www.youtube.com/embed/cDWF3bj1Juk"
           title="Motor Test"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

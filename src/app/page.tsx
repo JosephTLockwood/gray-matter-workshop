@@ -74,8 +74,8 @@ export default function Home() {
               Robot Arm
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Learn to program a robot arm with precise positioning control. 
-              Master PID tuning, encoder feedback, and motion profiling to achieve smooth, 
+              Learn to program a robot arm with precise positioning control.
+              Master PID tuning, encoder feedback, and motion profiling to achieve smooth,
               accurate movements for game piece manipulation.
             </p>
           </div>
@@ -93,8 +93,8 @@ export default function Home() {
               Flywheel Shooter
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Program a high-speed flywheel shooter system for consistent game piece 
-              launching. Explore velocity control, feedforward calculations, and 
+              Program a high-speed flywheel shooter system for consistent game piece
+              launching. Explore velocity control, feedforward calculations, and
               real-time adjustments for accuracy across varying distances.
             </p>
           </div>

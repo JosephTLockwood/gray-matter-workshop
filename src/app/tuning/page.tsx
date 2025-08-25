@@ -4,6 +4,7 @@ import { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
 import GitHubPR from "@/components/GitHubPR";
 import GitHubPage from "@/components/GitHubPage";
+import Image from "next/image";
 
 export default function Tuning() {
   const [activeTab, setActiveTab] = useState<"ide" | "diff">("ide");
@@ -60,12 +61,34 @@ export default function Tuning() {
           Code Evolution: From Basic to Advanced
         </h2>
 
+        <article className="flex flex-col gap-8 bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            Verifying Encoder Setup
+          </h2>
+
+          <div className="grid grid-cols-3 gap-4">
+            <p className="col-span-2">You'll need to make sure your encoder is configured correctly. With the device facing you like the following image, ensure that the encoder position is going up as you rotate the arm counterclockwise.</p>
+
+            <div className="flex w-full">
+              <Image src="/images/mechanisms/arm.jpg" alt="Arm" width={300} height={200} className="rounded-lg" />
+            </div>
+          </div>
+
+          <iframe
+            src="https://www.youtube.com/embed/zJgSQKrz8yE"
+            title="Encoder Setup"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full aspect-video rounded-lg"
+          />
+        </article>
+
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-lg p-6">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
             🎯 Workshop Journey Complete
           </h3>
           <p className="text-gray-700 dark:text-gray-300">
-            Explore the final ARM implementation and see exactly how we
+            Explore the final Arm implementation and see exactly how we
             transformed basic voltage control into sophisticated position
             control with PID, feedforward, and Motion Magic.
           </p>
@@ -77,21 +100,19 @@ export default function Tuning() {
             <div className="flex">
               <button
                 onClick={() => setActiveTab("ide")}
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${
-                  activeTab === "ide"
-                    ? "border-blue-600 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                }`}
+                className={`px-6 py-3 text-sm font-medium border-b-2 ${activeTab === "ide"
+                  ? "border-blue-600 text-blue-600"
+                  : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                  }`}
               >
                 💻 Final Implementation
               </button>
               <button
                 onClick={() => setActiveTab("diff")}
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${
-                  activeTab === "diff"
-                    ? "border-blue-600 text-blue-600"
-                    : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                }`}
+                className={`px-6 py-3 text-sm font-medium border-b-2 ${activeTab === "diff"
+                  ? "border-blue-600 text-blue-600"
+                  : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                  }`}
               >
                 🔄 GitHub Changes
               </button>
@@ -103,17 +124,17 @@ export default function Tuning() {
             {activeTab === "ide" ? (
               <div>
                 <GitHubPage
-                  repository="Hemlock5712/2025-Workshop"
+                  repository="Hemlock5712/Workshop-Code"
                   filePath="src/main/java/frc/robot/subsystems/Arm.java"
-                  branch="5-SubsystemAdditions"
+                  branch="3-PID"
                   className="m-0"
                 />
               </div>
             ) : (
               <div>
                 <GitHubPR
-                  repository="Hemlock5712/2025-Workshop"
-                  pullRequestNumber={1}
+                  repository="Hemlock5712/Workshop-Code"
+                  pullRequestNumber={3}
                   focusFile="Arm.java"
                   className="m-0"
                 />
