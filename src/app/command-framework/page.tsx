@@ -42,7 +42,7 @@ export default function CommandFramework() {
         </h2>
 
         <p>
-          Next up, we're going to add some commands to allow us to easily control the arm.
+          Next up, we&apos;re going to add some commands to allow us to easily control the arm.
         </p>
         <GithubPageWithPR repository="Hemlock5712/Workshop-Code" filePath="src/main/java/frc/robot/subsystems/Arm.java" branch="2-Commands" pullRequestNumber={2} focusFile="Arm.java" />
       </section>

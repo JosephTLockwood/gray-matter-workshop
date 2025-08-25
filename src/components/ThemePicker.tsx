@@ -22,11 +22,11 @@ export default function ThemePicker() {
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");
-        if(theme) {
+        if (theme) {
             document.documentElement.setAttribute("data-theme", theme);
             setTheme(theme as "light" | "dark" | "system");
         }
-    }, []);
+    }, [setTheme]);
 
     return (
         <div className="flex items-center gap-2 align-self-end justify-self-center">

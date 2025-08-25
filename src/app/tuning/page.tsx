@@ -64,7 +64,7 @@ export default function Tuning() {
           </h2>
 
           <div className="grid grid-cols-3 gap-4">
-            <p className="col-span-2">You'll need to make sure your encoder is configured correctly. With the device facing you like the following image, ensure that the encoder position is going up as you rotate the arm counterclockwise.</p>
+            <p className="col-span-2">You&apos;ll need to make sure your encoder is configured correctly. With the device facing you like the following image, ensure that the encoder position is going up as you rotate the arm counterclockwise.</p>
 
             <div className="flex w-full">
               <Image src="/images/mechanisms/arm.jpg" alt="Arm" width={300} height={200} className="rounded-lg" />

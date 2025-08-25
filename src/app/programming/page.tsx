@@ -1,6 +1,5 @@
 import PageTemplate from "@/components/PageTemplate";
 import GitHubPage from "@/components/GitHubPage";
-import ImageBlock from "@/components/ImageBlock";
 import Image from "next/image";
 
 export default function Programming() {
@@ -148,7 +147,7 @@ export default function Programming() {
         </h2>
 
         <div className="grid grid-cols-3 gap-4">
-          <p className="col-span-2">You'll want to make sure your motor is spinning in the expected direction. If the motor is getting positive voltage, it should be spinning counterclockwise. You can check this through tuner, with the device facing your like the following picture.</p>
+          <p className="col-span-2">You&apos;ll want to make sure your motor is spinning in the expected direction. If the motor is getting positive voltage, it should be spinning counterclockwise. You can check this through tuner, with the device facing your like the following picture.</p>
 
           <div className="flex w-full">
             <Image src="/images/mechanisms/arm.jpg" alt="Arm" width={300} height={200} className="rounded-lg" />
