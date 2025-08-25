@@ -1,13 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import PageTemplate from "@/components/PageTemplate";
-import GitHubPR from "@/components/GitHubPR";
-import GitHubPage from "@/components/GitHubPage";
 import Image from "next/image";
+import GithubPageWithPR from "@/components/GithubPageWithPR";
 
 export default function Tuning() {
-  const [activeTab, setActiveTab] = useState<"ide" | "diff">("ide");
   return (
     <PageTemplate
       title="Tuning Real Mechanisms"
@@ -94,54 +91,7 @@ export default function Tuning() {
           </p>
         </div>
 
-        {/* External Tabbed Interface */}
-        <div className="bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm">
-          <div className="border-b border-gray-200 dark:border-gray-800">
-            <div className="flex">
-              <button
-                onClick={() => setActiveTab("ide")}
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${activeTab === "ide"
-                  ? "border-blue-600 text-blue-600"
-                  : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                  }`}
-              >
-                💻 Final Implementation
-              </button>
-              <button
-                onClick={() => setActiveTab("diff")}
-                className={`px-6 py-3 text-sm font-medium border-b-2 ${activeTab === "diff"
-                  ? "border-blue-600 text-blue-600"
-                  : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                  }`}
-              >
-                🔄 GitHub Changes
-              </button>
-            </div>
-          </div>
-
-          {/* Tab Content */}
-          <div className="p-0">
-            {activeTab === "ide" ? (
-              <div>
-                <GitHubPage
-                  repository="Hemlock5712/Workshop-Code"
-                  filePath="src/main/java/frc/robot/subsystems/Arm.java"
-                  branch="3-PID"
-                  className="m-0"
-                />
-              </div>
-            ) : (
-              <div>
-                <GitHubPR
-                  repository="Hemlock5712/Workshop-Code"
-                  pullRequestNumber={3}
-                  focusFile="Arm.java"
-                  className="m-0"
-                />
-              </div>
-            )}
-          </div>
-        </div>
+        <GithubPageWithPR repository="Hemlock5712/Workshop-Code" filePath="src/main/java/frc/robot/subsystems/Arm.java" branch="3-PID" pullRequestNumber={3} focusFile="Arm.java" />
       </section>
     </PageTemplate>
   );

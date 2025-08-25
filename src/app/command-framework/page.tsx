@@ -1,4 +1,4 @@
-import GitHubPage from "@/components/GitHubPage";
+import GithubPageWithPR from "@/components/GithubPageWithPR";
 import PageTemplate from "@/components/PageTemplate";
 
 export default function CommandFramework() {
@@ -44,13 +44,8 @@ export default function CommandFramework() {
         <p>
           Next up, we're going to add some commands to allow us to easily control the arm.
         </p>
-        <GitHubPage repository="Hemlock5712/Workshop-Code" filePath="src/main/java/frc/robot/subsystems/Arm.java" branch="2-Commands" />
-
-
-
+        <GithubPageWithPR repository="Hemlock5712/Workshop-Code" filePath="src/main/java/frc/robot/subsystems/Arm.java" branch="2-Commands" pullRequestNumber={2} focusFile="Arm.java" />
       </section>
-
-
 
       <div className="bg-yellow-50 dark:bg-yellow-950/30 border border-yellow-200 dark:border-yellow-900 rounded-lg p-6">
         <p className="text-yellow-800 dark:text-yellow-300">
