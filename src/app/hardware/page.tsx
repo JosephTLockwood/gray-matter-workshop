@@ -33,7 +33,7 @@ export default function Hardware() {
                 className="mb-4"
               />
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                Kraken Motor
+                Kraken X60/X44
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-3">
                 CTRE Motor. Comes with a built-in motor controller called
@@ -327,7 +327,7 @@ export default function Hardware() {
           </h2>
 
           <div className="mb-8">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-800 mx-auto">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
                 📱 How to Update Motors
               </h3>

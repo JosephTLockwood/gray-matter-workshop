@@ -28,7 +28,7 @@ export default function Prerequisites() {
                     WPILib
                   </a> & <a href="https://www.ni.com/en/support/downloads/drivers/download.frc-game-tools.html#553883"
                            className="text-blue-600 underline hover:no-underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">
-                    Game Tools
+                    Game Tools <span className="text-gray-500 dark:text-gray-400">(Optional)</span>
                   </a>
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">
