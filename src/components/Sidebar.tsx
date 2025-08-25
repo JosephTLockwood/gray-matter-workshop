@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import ThemePicker from "./ThemePicker";
 
 /**
  * Main navigation items (Home, Introduction, Prerequisites)
@@ -255,13 +256,13 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed md:relative top-0 left-0 h-full bg-white shadow-lg border-r z-40 transform transition-all duration-300 ease-in-out ${
+        className={`fixed flex flex-col md:relative top-0 left-0 h-full bg-white shadow-lg border-r z-40 transform transition-all duration-300 ease-in-out ${
           isOpen
             ? "translate-x-0 w-64"
             : "-translate-x-full md:translate-x-0 md:w-16"
         } dark:bg-gray-900 dark:border-gray-800`}
       >
-        <div className={`p-4 ${isOpen ? "px-6" : "px-2"}`}>
+        <div className={`p-4 flex-grow ${isOpen ? "px-6" : "px-2"}`}>
           {/* Logo/Title */}
           <div className="mb-8 flex items-center justify-center">
             <Link
@@ -435,6 +436,9 @@ export default function Sidebar() {
             )}
 
           </nav>
+        </div>
+        <div className="p-4">
+          <ThemePicker />
         </div>
       </div>
     </>

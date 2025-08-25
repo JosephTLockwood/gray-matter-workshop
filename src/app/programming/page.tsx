@@ -20,7 +20,7 @@ export default function Programming() {
         <div className="bg-green-50 dark:bg-green-950/30 p-4 rounded-lg mb-6">
           <h3 className="font-semibold text-green-900 dark:text-green-300 mb-2">What You&apos;ll Learn:</h3>
           <ul className="list-disc list-inside text-green-800 dark:text-green-300 space-y-1">
-            <li>Setting up subsystems for ARM and Flywheel</li>
+            <li>Setting up subsystems for Arm and Flywheel</li>
             <li>Creating motor and sensor configurations</li>
             <li>Implementing control methods</li>
             <li>Command creation and deployment</li>
@@ -73,7 +73,7 @@ export default function Programming() {
         <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-lg p-6">
           <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">📋 Starting Point</h3>
           <p className="text-blue-800 dark:text-blue-300">
-            This is our initial ARM implementation. Throughout the workshop, we&apos;ll enhance this code by adding:
+            This is our initial Arm implementation. Throughout the workshop, we&apos;ll enhance this code by adding:
             PID control, feedforward, position control, safety limits, and more sophisticated commands.
           </p>
         </div>

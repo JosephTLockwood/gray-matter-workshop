@@ -4,3 +4,5 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
