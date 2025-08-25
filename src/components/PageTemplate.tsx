@@ -34,8 +34,8 @@ export default function PageTemplate({
         </div>
       )}
 
-      <div className="prose prose-lg max-w-none dark:prose-invert">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8">
+      <div className="flex flex-col gap-8 prose prose-lg max-w-none dark:prose-invert">
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
           {title}
         </h1>
 

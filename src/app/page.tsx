@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="max-w-6xl mx-auto px-4 py-12 flex flex-col gap-8">
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+      <div className="text-center flex flex-col gap-8">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100">
           Gray Matter Coding Workshop
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Learn FRC&apos;s best programming practices to build a robot good
           enough to win events. Master code architecture, subsystems, PID
           tuning, libraries, and more!
@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       {/* Workshop Overview */}
-      <div className="max-w-2xl mx-auto mb-16">
+      <div className="max-w-2xl mx-auto">
         <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Target Audience
@@ -55,7 +55,7 @@ export default function Home() {
       </div>
 
       {/* Mechanisms Section */}
-      <div className="mb-16">
+      <div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
           Mechanisms We&apos;ll Program
         </h2>
@@ -74,8 +74,8 @@ export default function Home() {
               Robot Arm
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Learn to program a robot arm with precise positioning control. 
-              Master PID tuning, encoder feedback, and motion profiling to achieve smooth, 
+              Learn to program a robot arm with precise positioning control.
+              Master PID tuning, encoder feedback, and motion profiling to achieve smooth,
               accurate movements for game piece manipulation.
             </p>
           </div>
@@ -93,8 +93,8 @@ export default function Home() {
               Flywheel Shooter
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Program a high-speed flywheel shooter system for consistent game piece 
-              launching. Explore velocity control, feedforward calculations, and 
+              Program a high-speed flywheel shooter system for consistent game piece
+              launching. Explore velocity control, feedforward calculations, and
               real-time adjustments for accuracy across varying distances.
             </p>
           </div>
